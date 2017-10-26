@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 19:36:27 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/25 22:21:58 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/26 18:51:19 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,13 @@ int					key_hook(int kc, t_env *e);
 void				pix_to_img(t_env *e);
 void				julia(t_env *e);
 void				julia_bis(t_env *e);
+void				julia_ter(t_env *e);
 void				init_julia(t_env *e);
 void				init_julia_bis(t_env *e);
+void				init_julia_ter(t_env *e);
 void				burningship(t_env *e);
 void				init_burningship(t_env *e);
+void				select_fractal_se(t_env *e, char *str);
 int					mouse_hook(int btn, int mx, int my, t_env *e);
 void				mandelbrot(t_env *e);
 int					add_powz(long double a, long double b, t_env *e);

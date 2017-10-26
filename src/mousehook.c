@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 19:57:49 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/25 19:57:50 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/26 18:44:07 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int		mouse_hook(int btn, int mx, int my, t_env *e)
 			e->it = btn == 4 ? e->it * 1.05 : e->it / 1.05;
 			mlx_clear_window(e->mlx, e->win);
 			e->f(e);
+			if (e->it < 40)
+				e->it = 50;
 		}
 		else
 			e->zoom = 10.0;

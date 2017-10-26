@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 19:35:02 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/25 22:24:04 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/26 19:02:46 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,18 @@ void	select_fractal(t_env *e, char *str)
 		e->init = &init_julia_bis;
 		e->f = &julia_bis;
 	}
-	else if (ft_strcmp(str, "4") == 0)
+	else
+		select_fractal_se(e, str);
+}
+
+void	select_fractal_se(t_env *e, char *str)
+{
+	if (ft_strcmp(str, "4") == 0)
+	{
+		e->init = &init_julia_bis;
+		e->f = &julia_ter;
+	}
+	else if (ft_strcmp(str, "5") == 0)
 	{
 		e->init = &init_burningship;
 		e->f = &burningship;
@@ -43,7 +54,7 @@ int		main(int ac, char **av)
 	if (error(ac, av) == 0)
 	{
 		ft_putstr_fd("usage: fractol [number]\n1 -> mandelbrot \n2 -> julia \n\
-3 -> details julia\n4 -> burningship\n", 2);
+3 -> ite julia_one\n4 -> ite julia_sec\n5 -> burningship\n", 2);
 		return (0);
 	}
 	if (!(e = (t_env *)ft_memalloc(sizeof(t_env))))

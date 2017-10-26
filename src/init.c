@@ -6,7 +6,7 @@
 /*   By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/25 19:34:19 by yhaddar           #+#    #+#             */
-/*   Updated: 2017/10/25 22:38:26 by yhaddar          ###   ########.fr       */
+/*   Updated: 2017/10/26 19:13:32 by yhaddar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		init_env(t_env *e)
 	e->mouse_x = 114;
 	e->mouse_y = 5;
 	e->mlx = mlx_init();
-	e->win = mlx_new_window(e->mlx, e->w, e->h, "Fract'ol");
+	e->win = mlx_new_window(e->mlx, e->w, e->h, "Gracious Fract'ol");
 	e->img = mlx_new_image(e->mlx, e->w, e->h);
 	e->pix = mlx_get_data_addr(e->img, &(e->bpp), &(e->szline), &(e->endian));
 	e->dx = 0.0;
@@ -50,6 +50,7 @@ void		init_julia(t_env *e)
 	e->it = 50;
 	e->coef = 0.2;
 }
+
 void		init_julia_bis(t_env *e)
 {
 	e->zr = 0;
@@ -57,13 +58,14 @@ void		init_julia_bis(t_env *e)
 	e->ci = 0;
 	e->zoom = 200;
 	e->zi = 0;
-	e->w = 620;
+	e->w = 650;
 	e->h = 540;
 	e->x1 = -1.5;
 	e->y1 = -1.2;
 	e->it = 50;
 	e->coef = 0.2;
 }
+
 void		init_burningship(t_env *e)
 {
 	e->cr = 0;

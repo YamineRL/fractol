@@ -6,7 +6,7 @@
 #    By: yhaddar <yhaddar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/27 11:17:27 by yhaddar           #+#    #+#              #
-#    Updated: 2017/10/25 21:25:22 by yhaddar          ###   ########.fr        #
+#    Updated: 2017/10/26 17:47:18 by yhaddar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRCS =		./src/burningship.c \
 			./src/mousemotion.c \
 			./src/pix_to_img.c \
 			./src/tools.c \
-			./src/transform.c
 
 OBJS =		$(SRCS:.c=.o)
 
